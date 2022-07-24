@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+  *{
+    padding: 10px;
+  }
+  body{
+    background-color: rgb(250, 241, 111);
+  }
+  #logo{
+    width: 60px;
+    height: auto;
+    border: solid black;
+    border-radius: 50%;
+  }
+  #Expand{
+    display: none;
+  }
+  .nav{
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightgray;
+    padding: auto;
+  }
+  /* .link{
+    border: solid 1px gray;
+  } */
+  .link a{
+    border: solid 1px rgb(99, 96, 96);
+    color: white;
+    justify-content: space-between;
+  }
+   @media only screen and (max-width:600px){
+    .link{
+      display: none;
+    }
+    .chat-us{
+      display: none;
+    }
+    #Expand{
+    display: block;
+  }
+}
+#parent-1{
+     border-bottom: 10px;
+    border-color: black;
+ }
+ #title{
+    text-align: center;
+    width: 80%;
+    height: auto;
+     background-image: url(data:image/jpeg;base64,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);
+    padding: 10px;
+   word-spacing: 8px;
+   margin: 0 auto;
+   letter-spacing: 12px;
+ }
+#Bhagat_Singh{
+  width: 150px;
+  height: auto;
+  border: solid gray;
+  border-radius: 5%;
+}
+#section-1{
+  background-color: rgb(243, 208, 183);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  width: 90%;
+  margin: 5%;
+}
+#aside-1{
+  background-color: aquamarine;
+  margin-right: 10px;
+}
+#button-1{
+    background-color: #4CAF50;
+  border: 5px;
+  color: white;
+  border-radius: 10%;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 1px 1px;
+  cursor: pointer;
+  justify-content: end;
+}
+#sectino-2{
+  display: flex;
+  justify-content: space-around;
+  /* align-items: center; */
+}
+#div-3{
+  width: 90%;
+  display: grid;
+  grid-template-columns: auto auto ;
+  justify-content: space-between;
+  background-color: palegreen;
+  justify-content: space-between;
+  margin-left: 5%;
+  border: solid 1px red;
+}
+#img-1{
+   align-items: center;
+   text-align: center;
+   margin-right: 5px;
+}
+#img{
+  width: 200px;
+  height: auto;
+  border: solid gray;
+  border-radius: 7%;
+}
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: DarkSalmon;
+  color: white;
+  margin: 10px;
+}
+.fa {
+  padding: 10pxpx;
+  font-size: 15px;
+  width: 15px;
+  text-align: center;
+  text-decoration: none;
+  margin: 3px 1px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+</style>
+<body> 
+  <nav class="nav">
+    <div>
+      <img id="logo" alt="logo" src="https://media-exp1.licdn.com/dms/image/C5603AQGWcVF8-_avKQ/profile-displayphoto-shrink_200_200/0/1657478050601?e=1663200000&v=beta&t=wmGEWR11CaSYSLyg16BkROISPbzKi04yQ1mLp1Lz0Lc">
+    </div>
+    <div class="link">
+      <a href="Home">Home</a>
+      <a href="About">About</a>
+      <a href="Contact us">Contact us</a>
+    </div>
+    <input class="chat-us" placeholder="Chats us">
+    <button id="Expand">Expand</button>
+  </nav>
+  <header>
+    <div id="parent-1">
+        <div id="title"><h1> <span>B</span>hagat <span>S</span>ingh</h1></div> 
+    </div>
+        </header>
+  <section id="section-1">
+    <aside id="aside-1"> 
+     <h3>The great Line by great man  "Bhagat Singh"</h3> 
+     <ul>
+      <li>They may kill me, but they cannot kill my ideas. They can crush my body, but they will not be able to crush my spirit</li>
+     <li>Revolution is an inalienable right of mankind. Freedom is an imperishable birth right of all</li>
+     <li>I am full of ambition and hope and charm of life. But I can renounce everything at the time of need</li>
+     <li>If the deaf have to hear, the sound has to be very loud</li>
+    </ul>
+    <p><samp style="color:brown">if you want to read more thought <button><a id="button-1" href="https://www.ndtv.com/india-news/bhagat-singhs-birth-anniversary-10-best-quotes-of-the-freedom-fighter-2302075">Click</a></button> this</samp></p>
+    </aside>
+    
+      <div>
+        <p>
+          Born
+          <br>
+          27 September 1907[a] Banga, Lyallpur District, Punjab Province, British India (present-day Faisalabad District, Punjab, Pakistan)
+          <br> 
+          Died
+          <br>
+          23 March 1931 (aged 23) Lahore Central Jail, Lahore, Lahore Division, Punjab Province, British India (present-day Lahore District, Punjab, Pakistan) 
+          <section id="sectino-2">
+            <div>
+              <img id="Bhagat_Singh" alt="Bhagat Singh" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Bhagat_Singh_1929.jpg/640px-Bhagat_Singh_1929.jpg">
+              <p id="pic-tital-1"><u>Bhagat Singh</u></p>
+            </div>
+            <div>
+              <p>Bhagat Singh’s contribution to India’s freedom struggle.
+                <br>
+                Bhagat Singh founded the Naujawan Bharat Sabha in the year 1926 to encourage the peasants and workers to fight against British rule. He was the secretary of that organisation. In 1928, the Hindustan Socialist Association (HSRA) was also established by him, along with Sukhdev, Chandrasekhar Azad and others.</p>
+              <p>Bhagat Singh’s contribution to India’s freedom struggle <br>
+                Bhagat Singh founded the Naujawan Bharat Sabha in the year 1926 to encourage the peasants and workers to fight against British rule. He was the secretary of that organisation. In 1928, the Hindustan Socialist Association (HSRA) was also established by him, along with Sukhdev, Chandrasekhar Azad and others.</p>
+            </div>
+          </section>
+          <p>Bhagat Singh (born September 27, 1907, Lyallpur, western Punjab, India [now in Pakistan]—died March 23, 1931, Lahore [now in Pakistan]), revolutionary hero of the Indian independence movement.
+            Bhagat Singh attended Dayanand Anglo Vedic High School, which was operated by Arya Samaj (a reform sect of modern Hinduism), and then National College, both located in Lahore. He began to protest British rule in India while still a youth and soon fought for national independence. He also worked as a writer and editor in Amritsar for Punjabi- and Urdu-language newspapers espousing Marxist theories. He is credited with popularizing the catchphrase “Inquilab zindabad” (“Long live the revolution”).</p>
+        </p>
+      </div>
+    
+  </section>
+  <div id="div-3">
+    <div id="img-1">
+      <img id="img" alt="Avinash Gautam" src="https://media-exp1.licdn.com/dms/image/C5603AQGWcVF8-_avKQ/profile-displayphoto-shrink_200_200/0/1657478050601?e=1663200000&v=beta&t=wmGEWR11CaSYSLyg16BkROISPbzKi04yQ1mLp1Lz0Lc">
+       <h5><u>Avinash Gautam</u></h5>
+    </div>
+    <div>
+      <h3>Some Information About me</h3>
+      <p> Hy...I am Avinash Gautam.<br>
+        I have thought of doing something big with dreams in my heart and I will
+        work day and night for it. duering this journey I am learning a lot, missing a lot. but whatever happens,
+        I will not hold back my hand  from working hard.<br>
+        I have tried to pay a small <span style=" font-style: italic;">Tribute</span> to <span style=" font-style: italic;">Bhagat Singh</span> 
+        . I hope you guys  liks my eforts. 
+      </p>
+      <form action="post" id="post">
+        <p><label for="feedback"> Your feedback is important to me:</label></p>
+        <textarea id="feedback" name="feedback" rows="4" cols="50">
+        </textarea>
+        <br>
+        <input type="submit" value="Submit" id="Submit">
+      </form>
+    </div>
+  </div>
+  <footer>
+    <div> 
+      <main>
+  <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+<a href="https://www.facebook.com/" class="fa fa-twitter"></a>
+<a href="Tyagi.avi7411@gmai.com" class="fa fa-google"></a>
+</main>
+<a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+    </div>
+  </footer>
+</body>
+</html>
